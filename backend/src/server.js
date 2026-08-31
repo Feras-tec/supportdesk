@@ -15,9 +15,9 @@ app.use(cors());
 app.use(express.json());
 
 app.use(logger);
-app.use("/users", userRoutes);
-app.use("/tickets", ticketRoutes);
-app.get("/", (req, res) => {
+app.use("/api/users", userRoutes);
+app.use("/api/tickets", ticketRoutes);
+app.get("/api", (req, res) => {
   res.status(200).json({
     success: true,
     message: "SupportDesk API is running",
